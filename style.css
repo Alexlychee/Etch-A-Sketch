@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     width: 540px;
     height: 540px;
+    margin: auto;
 }
 
 .grid-item {
@@ -12,4 +13,10 @@
 
 .color {
     background-color: black;
+}
+
+.resize {
+    display: block;
+    margin: auto;
+    margin-bottom: 10%;
 }

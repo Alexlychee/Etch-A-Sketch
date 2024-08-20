@@ -1,8 +1,10 @@
 const DEFAULT_N = 16;
 let n = DEFAULT_N;
 let grid = document.querySelector(".container");
+let button = document.querySelector(".resize");
 
 createGrid(n);
+button.addEventListener("click", resizeGrid);
 
 function createGrid(n) {
     grid.innerHTML = '';
@@ -23,3 +25,18 @@ function createGrid(n) {
         event.target.classList.add("color");
     }));
 }
+
+function resizeGrid() {
+    let newGridSize = prompt("Enter a size for the new grid. Must be <= 100px");
+    if (newGridSize > 100) {
+        alert("Please enter a grid value less than 100.")
+        return;
+    } 
+    if (newGridSize <= 0) {
+        alert("Please enter a grid value greater than 0.")
+        return;
+    }
+    createGrid(newGridSize);
+}
+
+
